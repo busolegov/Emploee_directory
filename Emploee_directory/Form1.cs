@@ -6,7 +6,7 @@ namespace Emploee_directory
 {
     public partial class Form1 : Form
     {
-        public static string connectString;
+        private static string connectString;
 
         public Form1()
         {
@@ -42,7 +42,7 @@ namespace Emploee_directory
             }
         }
 
-        public void GetStat(string query) 
+        private void GetStat(string query) 
         {
             using (SqlConnection connection = new SqlConnection(connectString))
             {
