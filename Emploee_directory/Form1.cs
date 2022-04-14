@@ -129,9 +129,9 @@ namespace Emploee_directory
             connectString = textBox6.Text;
             try
             {
-                SqlConnection con = new SqlConnection(connectString);
-                con.Open();
-                if (con.State == ConnectionState.Open)
+                SqlConnection connection = new SqlConnection(connectString);
+                connection.Open();
+                if (connection.State == ConnectionState.Open)
                 {
                     LoadData(textBox6.Text);
                     string caption = "Сообщение";
